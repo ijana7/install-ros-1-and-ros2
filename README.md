@@ -60,3 +60,48 @@ sudo rosdep init
 rosdep update
 ## ran rviz 
 <img width="1003" alt="‏لقطة الشاشة ١٤٤٥-١٢-٢٨ في ٤ ٤٠ ١٤ م" src="https://github.com/ijana7/install-ros1-and-ros2/assets/173642526/7e893622-8d81-4840-a573-bda47bbef488">
+
+## ros2
+ first write in terminal :
+
+ locale  # to check for UTF-8
+ 
+ <img width="1009" alt="‏لقطة الشاشة ١٤٤٥-١٢-٢٨ في ٤ ٥١ ٣٥ م" src="https://github.com/ijana7/install-ros1-and-ros2/assets/173642526/3d62b176-5833-4a19-9f9d-7212380e1d72">
+ 
+setup sources:
+ 
+sudo apt install software-properties-common
+
+Now add the ROS 2 GPG key with apt.Now add the ROS 2 GPG key with apt:
+
+sudo apt update && sudo apt install curl -y
+
+Then add the repository to your sources list:
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+install ros 2 packages
+
+sudo apt update
+
+sudo apt upgrade
+
+<img width="999" alt="‏لقطة الشاشة ١٤٤٥-١٢-٢٨ في ٤ ٥٢ ٣٢ م" src="https://github.com/ijana7/install-ros1-and-ros2/assets/173642526/84feb4c3-4f07-4167-a8b4-531c88343205">
+
+Desktop Install (Recommended): ROS, RViz, demos, tutorials:
+
+sudo apt install ros-foxy-desktop python3-argcomplete
+
+<img width="1035" alt="‏لقطة الشاشة ١٤٤٥-١٢-٢٨ في ٤ ٥٣ ٣٨ م" src="https://github.com/ijana7/install-ros1-and-ros2/assets/173642526/069be275-1fc2-45ee-b71f-bda4ee587c17">
+
+enviornment setup :
+
+source /opt/ros/foxy/setup.bash
+
+<img width="1005" alt="‏لقطة الشاشة ١٤٤٥-١٢-٢٨ في ٤ ٥٤ ٥٨ م" src="https://github.com/ijana7/install-ros1-and-ros2/assets/173642526/82bde61a-4986-474d-90d3-11fec976867e">
+
+try some ex :
+ros2 run demo_nodes_cpp talker
+
+ros2 run demo_nodes_py listener
+
+<img width="1710" alt="‏لقطة الشاشة ١٤٤٥-١٢-٢٧ في ٩ ٥٠ ٠٩ م" src="https://github.com/ijana7/install-ros1-and-ros2/assets/173642526/7e01c2df-707d-4fb0-931e-da3a403d55a6">
